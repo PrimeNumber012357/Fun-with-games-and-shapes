@@ -41,24 +41,17 @@ def validate_triangle(z):
     else:
         return False
 
-#Can't figure out how to get matplotlib to connect all the points
 def display_triangle(z):
     import matplotlib.pyplot as plt
 
-    x_values = [z[0], z[2], z[4]]
-    y_values = [z[1], z[3], z[5]]
-    point_1 = [x_values[0], y_values[0]]
-    point_2 = [x_values[1], y_values[1]]
-    point_3 = [x_values[2], y_values[2]]
-    #plt.plot(point_1,point_3, 'ro-')
-    #plt.plot(point_3,point_1, 'ro-')
-    #plt.plot(point_1,point_2, 'ro-')
-    plt.scatter(x_values, y_values)
-    #plt.plot(x_values, y_values)
+    x_values = [z[0], z[2], z[4], z[0]] #add copy of 1st point to end for plotting
+    y_values = [z[1], z[3], z[5], z[1]]
+    #plt.scatter(x_values, y_values)
+    plt.plot(x_values, y_values, 'ro-')
     plt.xlabel('x - axis')
     plt.ylabel('y - axis')
     plt.show()
-    print(point_1)
+
 
 
 

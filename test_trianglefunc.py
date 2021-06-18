@@ -2,7 +2,7 @@
 
 import trianglefunc
 #z is the list of all desired point values [x1 y1 x2 y2 x3 y3]
-z = [0, 0, 1, 1, 2, 5]
+z = [1.2, 234.3, 1, 1, 2, 5]
 
 #trianglefunc.main()
 
@@ -13,5 +13,4 @@ if trianglefunc.validate_triangle(z):
 else:
     print("Not a valid triangle")
 
-#Can't get matplotlib to connect all the points
 trianglefunc.display_triangle(z)
